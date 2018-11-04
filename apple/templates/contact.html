@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block content %}
+        
+        <!-- Portfolio Teasers
+		================================================== -->
+        
+        <div class="sixteen columns row divide notop">
+        	<h3 class="titledivider">Contact.</h3>
+            <div class="dividerline"></div>
+        </div>
+        
+        <!-- Content Holder -->
+		<div class="eleven columns row content left">
+            
+            <!-- Google Maps -->
+            <div class="eleven columns row alpha">
+                <div id="googlemap"></div>
+            </div>
+            
+            <!-- Content Holder -->
+			<div class="eleven columns row content alpha">
+            	<h6>Drop Us A Line! We Will Get Back To You.</h6>
+            	<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p> 
+            </div>
+
+            <!-- Comment Form -->  
+            <div id="contactus">
+                <form id="contactform" method="post" action="#">
+                    <input type="text" name="name" id="reply_name" class="requiredfield" onFocus="if(this.value == 'Name *') { this.value = ''; }" onBlur="if(this.value == '') { this.value = 'Name *'; }" value="Name *"/>
+                    <input type="text" name="email" id="reply_email" class="requiredfield last" onFocus="if(this.value == 'Email *') { this.value = ''; }" onBlur="if(this.value == '') { this.value = 'Email *'; }" value="Email *"/>
+                    <input type="text" name="address" id="reply_address" class="" onFocus="if(this.value == 'Address') { this.value = ''; }" onBlur="if(this.value == '') { this.value = 'Address'; }" value="Address"/>
+                    
+                    <input type="text" name="Phone" id="reply_website" class="last" onFocus="if(this.value == 'Phone') { this.value = ''; }" onBlur="if(this.value == '') { this.value = 'Phone'; }" value="Phone"/>
+                    <textarea name="message" id="reply_message" class="requiredfield" onFocus="if(this.value == 'Message *') { this.value = ''; }" onBlur="if(this.value == '') { this.value = 'Message *'; }">Message *</textarea>
+                    <button type="submit" name="send">Send Message</button>
+                    <span class="errormessage">Error! Please correct marked fields.</span>
+                    <span class="successmessage">Message send successfully!</span>
+                    <span class="sendingmessage">Sending...</span>  
+                </form>
+            </div>
+ 
+            <div class="clear"></div>
+		</div>
+        
+       <!-- Sidebar
+        ================================================== -->
+
+        <div class="four columns sidebar offset-by-one content">
+
+            <div class="widget">
+            	<h5>Contact Info</h5>
+            	<div>
+                    <a href="#" class="link">Company Location</a><br/>
+                    Apex Studios, Cologne City Branch<br/>
+                    Mainstreet 123<br/>
+                    50600, Cologne, Germany<br/><br/>
+                    
+                    <a href="#" class="link">How To Contact Us</a><br/>
+                    Email: <a href="mailto:your@email.com" class="linkbg">info@yourdomain.com</a><br/>
+                    Phone: 800.123.4567<br/><br/>
+                    
+                    <a href="#" class="link">Office Hours</a><br/>
+                    Mondays-Friday: 09:00 - 18:00<br/>
+                    Saturday: 10:00 - 15:00
+                </div>
+            </div>
+
+            <div class="clear"></div>
+    
+        </div>
+        
+        <!-- Space Adjuster
+        ================================================== -->
+        
+        <div class="sixteen columns bottomadjust"></div>
+   
+	</div><!-- container -->
+
+{% endblock %}

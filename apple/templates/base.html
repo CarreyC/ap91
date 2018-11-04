@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+
+<!-- Mirrored from demo.cssmoban.com/cssthemes5/twts_110_punch_apex/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 31 Oct 2018 17:28:20 GMT -->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Apex Responsive Portfolio Template</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="static/css/base.css">
+	<link rel="stylesheet" href="static/css/skeleton.css">
+	<link rel="stylesheet" href="static/css/screen.css">
+    <!--[if IE 7]>
+        <link rel="stylesheet" href="stylesheets/ie7.css">
+    <![endif]-->
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="static/images/favicon.ico">
+	<link rel="apple-touch-icon" href="static/images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="static/images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="static/images/apple-touch-icon-114x114.png">
+    
+    <!-- Fonts
+	================================================== -->
+    <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+  
+</head>
+<body>
+
+
+	<!-- Site Backgrounds
+	================================================== -->
+	
+    <!-- Change to class="poswrapheaderline wide" and class="headerline full" for a full-width header line -->
+	<div class="poswrapheaderline wide"><div class="headerline full"></div></div>  
+    <!-- Remove or uncomment depending on if you want a background image or tile -->
+    <!--<div class="tiledbackground"></div>-->
+    <img src="static/images/bg2.jpg" alt="" id="background" />
+    <!-- Change to class="poswrapper wide" and class="whitebackground full" for a full-width site background -->
+    <div class="poswrapper wide"><div class="whitebackground full"></div></div>
+
+	<div class="container main portfolio4column">
+    
+        <!-- Header | Logo, Menu
+		================================================== -->
+	
+		<div class="sixteen columns header">
+        
+			<div class="logo"><a href="index.html"><img src="static/images/logo.png" alt="" /></a></div>
+            <div class="logotext">a responsive minimal portfolio template.</div>
+            <div class="mainmenu">
+                <div id="mainmenu" class="ddsmoothmenu">
+                    <ul>
+                        <li><a href="#">Home</a>
+                            <ul>  
+                                <li><a href="{{ url_for('trade.start') }}">Home Layout</a></li>
+                                <li><a href="{{ url_for('trade.alter') }}">Another Layout Example</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">About</a>
+                            <ul>  
+                                <li><a href="{{ url_for('trade.page_full') }}">Full Page</a></li>
+                                <li><a href="{{ url_for('trade.page_left') }}">Sidebar Left Page</a></li>
+                                <li><a href="{{ url_for('trade.page_right') }}">Sidebar Right Page</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Portfolio</a>
+                            <ul>  
+                                <li><a href="{{ url_for('trade.portfolio_4') }}">Portfolio Four Columns</a></li>
+                                <li><a href="{{ url_for('trade.portfolio_2') }}">Portfolio Two Columns</a></li>
+                                <li><a href="{{ url_for('trade.portfolio_1') }}">Portfolio With Sidebar</a></li>
+                                <li><a href="{{ url_for('trade.portfolio_s') }}">Project Detail Page</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Blog</a>
+                            <ul>  
+                                <li><a href="{{ url_for('trade.blog_overview') }}">Blog Overview</a></li>
+                                <li><a href="{{ url_for('trade.blog_single') }}">Single Blog Post</a></li>
+                            </ul>
+                        </li>	
+                        <li><a href="{{ url_for('trade.contact') }}">Contact</a></li>	
+                    </ul>
+                    <br style="clear: left" />
+                </div>
+                
+                <!-- Responsive Menu -->
+                
+				<form id="responsive-menu" action="#" method="post">
+                    <select>
+                        <option value="">Navigation</option>
+                    </select>
+				</form>
+				
+            </div>
+            <div class="headerdivider"></div>
+            
+		</div>
+		{% block content %}{% endblock %}
+
+	<!-- Footer
+	================================================== -->
+	
+    <!-- Change to class="container footerwrap full" for a full-width footer -->
+	<div class="container footerwrap full">
+        <div class="footer">
+        	<div class="sixteen columns">
+            
+                <div class="four columns widget alpha">
+                    <h5>Latest Projects</h5>
+                    <div class="widget_portfolio">
+                        <ul>
+                        	<li class="clearfix"><a href="#" class="borderhover"><img src="static/images/thumbs/pop_folio1.jpg" alt="" /></a></li>
+                        	<li class="clearfix"><a href="#" class="borderhover"><img src="static/images/thumbs/pop_folio2.jpg" alt="" /></a></li>
+                            <li class="clearfix"><a href="#" class="borderhover"><img src="static/images/thumbs/pop_folio3.jpg" alt="" /></a></li>
+                            <li class="clearfix"><a href="#" class="borderhover"><img src="static/images/thumbs/pop_folio4.jpg" alt="" /></a></li>
+                            <li class="clearfix"><a href="#" class="borderhover"><img src="static/images/thumbs/pop_folio5.jpg" alt="" /></a></li>
+                            <li class="clearfix"><a href="#" class="borderhover"><img src="static/images/thumbs/pop_folio6.jpg" alt="" /></a></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                
+                <div class="four columns widget">
+                   <h5>Twitter Feed</h5>
+                   <!-- Twitter Embedded Timeline Markup Replace Here Start -->
+                   With the Twitter API 1.1 you need to go <a href="https://twitter.com/settings/widgets" target="_blank">here</a> to create a twitter widget.<br/>
+				   Paste the generated code here!
+				   <!-- Twitter Embedded Timeline Markup Replace Here End -->
+                </div>
+                
+                <div class="four columns widget">
+                    <h5>Popular Blog Posts</h5>
+                    <div class="widget_blogposts">
+                        <ul>
+                        	<li class="clearfix">
+                            	<a href="#" class="borderhover"><img src="static/images/thumbs/pop_blog1.jpg" alt="" /></a>
+                                <div class="postlink"><a href="#">Pretty Widgets</a></div>
+                                <div class="subline">January 23, 2012</div>
+                            </li>
+                        	<li class="clearfix">
+                            	<a href="#" class="borderhover"><img src="static/images/thumbs/pop_blog2.jpg" alt="" /></a>
+                                <div class="postlink"><a href="#">Convenient Structure</a></div>
+                                <div class="subline">January 21, 2012</div>
+                            </li>
+                            <li class="clearfix">
+                            	<a href="#" class="borderhover"><img src="static/images/thumbs/pop_blog3.jpg" alt="" /></a>
+                                <div class="postlink"><a href="#">Another Blog Post</a></div>
+                                <div class="subline">January 17, 2012</div>
+                            </li>
+                            <li class="clearfix">
+                            	<a href="#" class="borderhover"><img src="static/images/thumbs/pop_blog4.jpg" alt="" /></a>
+                                <div class="postlink"><a href="#">Responsive Layout</a></div>
+                                <div class="subline">January 3, 2012</div>
+                            </li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                
+                <div class="four columns widget omega">
+                    <h5>Quick Contact</h5>
+                    <div>
+                        <form id="quickcontact" method="post" action="#">
+                        <input type="text" name="name" id="quickcontact_name" class="requiredfield" onFocus="if(this.value == 'Name *') { this.value = ''; }" onBlur="if(this.value == '') { this.value = 'Name *'; }" value='Name *'/>
+                        <input type="text" name="email" id="quickcontact_email" class="requiredfield" onFocus="if(this.value == 'Email *') { this.value = ''; }" onBlur="if(this.value == '') { this.value = 'Email *'; }" value='Email *'/>
+                        <textarea name="message" id="quickcontact_message" class="requiredfield" onFocus="if(this.value == 'Message *') { this.value = ''; }" onBlur="if(this.value == '') { this.value = 'Message *'; }">Message *</textarea>
+                        <button type="submit" name="send">Send</button>
+                        <span class="errormessage">Error! Please correct marked fields.</span>
+                        <span class="successmessage">Message send successfully!</span>
+                        <span class="sendingmessage">Sending...</span>      
+                        </form>
+                    </div>
+                </div><div class="clear"></div>
+                
+            </div>
+        </div>
+	</div><!-- container -->
+    
+    <!-- Sub-Footer
+	================================================== -->
+    
+    <!-- Change to class="container subfooterwrap full" for a full-width subfooter -->
+    <div class="container subfooterwrap full">
+    	<div class="subfooter">
+        	<div class="eight columns">© 2015 ThemePunch Apex Responsive Portfolio Template.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></div>
+            <div class="eight columns">
+            	<ul class="socialicons">
+                	<li><a href="#themepunchofficial" class="social_facebook"></a></li>
+                    <li><a href="#themepunch" class="social_twitter"></a></li>
+                    <li><a href="#+ThemePunch" class="social_googleplus"></a></li>
+                    <li><a href="#user/ThemePunch" class="social_vimeo"></a></li>
+                    <li><a href="#user/themepunch/portfolio" class="social_rss"></a></li>
+                </ul>
+                <div class="socialtext">Stay in Touch via Social Networks.</div>
+            </div>
+        </div>
+    </div>
+
+<!-- End Document
+================================================== -->
+    
+<!-- Scripts
+================================================== -->
+    <script src="static/js/jquery-1.7.min.js" type="text/javascript"></script>
+    <script src="static/js/jquery.easing.1.3.js" type="text/javascript"></script>
+    <script src="static/js/jquery.animate-colors-min.js" type="text/javascript"></script>
+    <!--/***********************************************
+    * Smooth Navigational Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+    * This notice MUST stay intact for legal use
+    * Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+    ***********************************************/-->
+    <script src="static/js/ddsmoothmenu.js" type="text/javascript"></script>
+    <script src="static/js/jquery.cssAnimate.mini.js" type="text/javascript"></script>
+    <script src="static/js/jquery.fitvids.js" type="text/javascript"></script>
+    <script src="static/js/jquery.flexslider-min.js" type="text/javascript"></script>
+    <script src="static/js/jquery.prettyPhoto.js" type="text/javascript"></script>
+    <script src="static/js/screen.js" type="text/javascript"></script>
+    
+</body>
+
+<!-- Mirrored from demo.cssmoban.com/cssthemes5/twts_110_punch_apex/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 31 Oct 2018 17:29:43 GMT -->
+</html>
