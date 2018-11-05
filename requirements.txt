@@ -1,7 +1,10 @@
 flask
-flask_bcrypt
-flask_bootstrap
+flask-bcrypt
+flask-bootstrap
 flask-sqlalchemy
 flask-wtf
-flask_login
+flask-login
+flask-migrate
+flask-script
+pymysql
 redis

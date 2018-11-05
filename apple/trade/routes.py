@@ -1,10 +1,12 @@
 from flask import Blueprint, render_template
+from apple.trade.models import Banner
 
 trade = Blueprint('trade', __name__)
 
-@trade.route('/start')
+@trade.route('/')
 def start():
-	return render_template('index.html')
+	banners = Banner.query.all()
+	return render_template('index.html', banners=banners)
 
 @trade.route('/alter')
 def alter():
