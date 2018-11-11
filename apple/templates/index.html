@@ -38,72 +38,17 @@
         </div>
         
 		<div class="sixteen columns row teasers portfolio">
-        
+        {% for item in items %}
         	<div class="four columns teaser all-group iphone-group">
-               <a href="#" data-text="» 前往選購" class="hovering"><img src="static/images/apple_its/macbook.jpg" alt="" class="scale-with-grid" /></a>
-               <div class="pluswrap">
-                   <!-- <a href="#" class="bigplus"></a> -->
-                   <div class="topline"><a href="#">MacBook</a></div>
-                   <div class="subline">100 件物品正在賣拍中</div>
-               </div>
-            </div>
-			<div class="four columns teaser all-group photoshop-group">
-                <a href="#" data-text="» 前往選購" class="hovering"><img src="static/images/apple_its/iphone.jpg" alt="" class="scale-with-grid" /></a>
+                <a href="{{ url_for('trade.category', ctype=item.name) }}" data-text="» 前往子分類" class="hovering">
+                <img src="{{url_for('static', filename=item.pic)}}" alt="" class="scale-with-grid" /></a>
                 <div class="pluswrap">
-                    <a href="#" class="bigplus"></a>
-                    <div class="topline"><a href="#">iPhone</a></div>
-                    <div class="subline">2482 件物品正在賣拍中</div>
+                    <!-- <a href="#" class="bigplus"></a> -->
+                    <div class="topline"><a href="{{ url_for('trade.category', ctype=item.name) }}">{{item.name}}</a></div>
+                    <div class="subline">100 件物品正在賣拍中</div>
                 </div>
             </div>
-			<div class="four columns teaser all-group concepts-group">
-                <a href="#" data-text="» 前往選購" class="hovering"><img src="static/images/apple_its/ipad.jpg" alt="" class="scale-with-grid" /></a>
-                <div class="pluswrap">
-                    <a href="#" class="bigplus"></a>
-                    <div class="topline"><a href="#">iPad</a></div>
-                    <div class="subline">1130 件物品正在賣拍中</div>
-                </div>
-            </div>
-            <div class="four columns teaser all-group print-group">
-            	<a href="#" data-text="» 前往選購" class="hovering"><img src="static/images/apple_its/imac.jpg" alt="" class="scale-with-grid" /></a>
-                <div class="pluswrap">
-                    <a href="#" class="bigplus"></a>
-                    <div class="topline"><a href="#">iMac</a></div>
-                    <div class="subline">129 件物品正在賣拍中</div>
-                </div>
-            </div>
-            <div class="four columns teaser all-group concepts-group">
-               <a href="#" data-text="» 前往選購" class="hovering"><img src="static/images/apple_its/watch.jpg" alt="" class="scale-with-grid" /></a>
-               <div class="pluswrap">
-                   <a href="#" class="bigplus"></a>
-                   <div class="topline"><a href="#">Apple Watch</a></div>
-                   <div class="subline">628 件物品正在賣拍中</div>
-               </div>
-            </div>
-			<div class="four columns teaser all-group print-group">
-                <a href="#" data-text="» 前往選購" class="hovering"><img src="static/images/apple_its/pencil.jpg" alt="" class="scale-with-grid" /></a>
-                <div class="pluswrap">
-                    <a href="#" class="bigplus"></a>
-                    <div class="topline"><a href="#">Apple Pencil</a></div>
-                    <div class="subline">52 件物品正在賣拍中</div>
-                </div>
-            </div>
-			<div class="four columns teaser all-group web-group">
-                <a href="#" data-text="» 前往選購" class="hovering"><img src="static/images/apple_its/mouse.jpg" alt="" class="scale-with-grid" /></a>
-                <div class="pluswrap">
-                    <a href="#" class="bigplus"></a>
-                    <div class="topline"><a href="#">Magic Mouse</a></div>
-                    <div class="subline">209 件物品正在賣拍中</div>
-                </div>
-            </div>
-            <div class="four columns teaser all-group photoshop-group">
-            	<a href="#" data-text="» 前往選購" class="hovering"><img src="static/images/apple_its/tv.jpg" alt="" class="scale-with-grid" /></a>
-                <div class="pluswrap">
-                    <a href="#" class="bigplus"></a>
-                    <div class="topline"><a href="#">Apple TV</a></div>
-                    <div class="subline">82 件物品正在賣拍中</div>
-                </div>
-            </div>
-            
+        {% endfor %}
 			<div class="clear"></div>
 		</div><div class="clear"></div>
         
@@ -119,17 +64,31 @@
             <div class="eight columns alpha">
             
                 <div class="eight columns alpha newsteaser row">
-                    <a href="#" class="borderhover"><img src="static/images/thumbs/from_blog1.jpg" alt="" width="75" height="75" /></a>
-                    <div class="topline"><a href="#">Blogpost With Image</a></div>
-                    <div class="subline">Jan 23 by Admin</div>
-                    <div class="newsexcerpt">Tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua diam nonumy eirmod...</div>
+                    <a href="#" class="borderhover"><img src="static/images/traded/traded.jpg" alt="" width="75" height="75" /></a>
+                    <div class="topline"><a href="#">MacBook 2016</a></div>
+                    <div class="subline">2018/11/23 by 阿貓</div>
+                    <div class="newsexcerpt">九成五新，使用三個月，換機出售</div>
                 </div>
                 
-                <div class="eight columns alpha newsteaser">
-                    <a href="#" class="borderhover"><img src="static/images/thumbs/from_blog2.jpg" alt="" width="75" height="75" /></a>
-                    <div class="topline"><a href="#">Blogpost Slideshow</a></div>
-                    <div class="subline">Jan 23 by Admin</div>
-                    <div class="newsexcerpt">Tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua diam nonumy eirmod...</div>
+                <div class="eight columns alpha newsteaser row">
+                    <a href="#" class="borderhover"><img src="static/images/traded/traded.jpg" alt="" width="75" height="75" /></a>
+                    <div class="topline"><a href="#">MacBook 2016</a></div>
+                    <div class="subline">2018/11/23 by 阿貓</div>
+                    <div class="newsexcerpt">九成五新，使用三個月，換機出售</div>
+                </div>
+                
+                <div class="eight columns alpha newsteaser row">
+                    <a href="#" class="borderhover"><img src="static/images/traded/traded.jpg" alt="" width="75" height="75" /></a>
+                    <div class="topline"><a href="#">MacBook 2016</a></div>
+                    <div class="subline">2018/11/23 by 阿貓</div>
+                    <div class="newsexcerpt">九成五新，使用三個月，換機出售</div>
+                </div>
+                
+                <div class="eight columns alpha newsteaser row">
+                    <a href="#" class="borderhover"><img src="static/images/traded/traded.jpg" alt="" width="75" height="75" /></a>
+                    <div class="topline"><a href="#">MacBook 2016</a></div>
+                    <div class="subline">2018/11/23 by 阿貓</div>
+                    <div class="newsexcerpt">九成五新，使用三個月，換機出售</div>
                 </div>
                 
             </div>
@@ -148,15 +107,29 @@
             <div class="eight columns alpha">
             
                 <div class="eight columns alpha newsteaser row">
-                    <a href="#" class="borderhover"><img src="static/images/thumbs/from_blog1.jpg" alt="" width="75" height="75" /></a>
+                    <a href="#" class="borderhover"><img src="static/images/new/new.jpg" alt="" width="75" height="75" /></a>
                     <div class="topline"><a href="#">Blogpost With Image</a></div>
                     <div class="subline">Jan 23 by Admin</div>
                     <div class="newsexcerpt">Tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua diam nonumy eirmod...</div>
                 </div>
                 
-                <div class="eight columns alpha newsteaser">
-                    <a href="#" class="borderhover"><img src="static/images/thumbs/from_blog2.jpg" alt="" width="75" height="75" /></a>
-                    <div class="topline"><a href="#">Blogpost Slideshow</a></div>
+                <div class="eight columns alpha newsteaser row">
+                    <a href="#" class="borderhover"><img src="static/images/new/new.jpg" alt="" width="75" height="75" /></a>
+                    <div class="topline"><a href="#">Blogpost With Image</a></div>
+                    <div class="subline">Jan 23 by Admin</div>
+                    <div class="newsexcerpt">Tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua diam nonumy eirmod...</div>
+                </div>
+
+                <div class="eight columns alpha newsteaser row">
+                    <a href="#" class="borderhover"><img src="static/images/new/new.jpg" alt="" width="75" height="75" /></a>
+                    <div class="topline"><a href="#">Blogpost With Image</a></div>
+                    <div class="subline">Jan 23 by Admin</div>
+                    <div class="newsexcerpt">Tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua diam nonumy eirmod...</div>
+                </div>
+
+                <div class="eight columns alpha newsteaser row">
+                    <a href="#" class="borderhover"><img src="static/images/new/new.jpg" alt="" width="75" height="75" /></a>
+                    <div class="topline"><a href="#">Blogpost With Image</a></div>
                     <div class="subline">Jan 23 by Admin</div>
                     <div class="newsexcerpt">Tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua diam nonumy eirmod...</div>
                 </div>

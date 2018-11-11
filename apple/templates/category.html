@@ -1,79 +1,60 @@
 {% extends 'base.html' %}
 {% block content %}
-		
-        <!-- Slider
-		================================================== -->
         
-		<div class="sixteen columns row">        
+        <!-- Slider
+        ================================================== -->
+        
+        <div class="sixteen columns row">        
             <div class="flexslider clearfix">
                 <ul class="slides">
-                    <li><img src="static/images/banner/banner2_wide.jpg" alt="" /><p class="flex-caption">This is a pretty line of caption text.</p></li>
-                    <li><img src="static/images/banner/banner1_wide.jpg" alt="" /></li>
-                    <li><img src="static/images/banner/banner3_wide.jpg" alt="" /><p class="flex-caption">We hope you enjoy this theme!</p></li>
+                    <li><img src="{{url_for('static', filename='images/banner/banner2_wide.jpg')}}" alt="" />
+                    <p class="flex-caption">This is a pretty line of caption text.</p></li>
+                    <li><img src="{{url_for('static', filename='images/banner/banner1_wide.jpg')}}" alt="" /></li>
+                    <li><img src="{{url_for('static', filename='images/banner/banner3_wide.jpg')}}" alt="" />
+                    <p class="flex-caption">We hope you enjoy this theme!</p></li>
                 </ul>
             </div>
             <div class="sliderspacefix"></div>
-		</div>
+        </div>
         
         <!-- Portfolio Teasers
-		================================================== -->
+        ================================================== -->
         
         <div class="sixteen columns row divide">
-        	<h3 class="titledivider">Recent Projects.</h3>
-            <div class="rightlink"><a href="#" class="titlelink">&raquo; Optional Link</a></div>
+            <h3 class="titledivider"><a href="{{ url_for('trade.start') }}">回首頁</a> &raquo; Macbook 產品系列</h3>
+            <div class="rightlink"><a href="#" class="titlelink">Macbook維修 +__ Macbook週邊 +__</a></div>
             <div class="dividerline"></div>
         </div>
         
-		<div class="sixteen columns row teasers">
-        	<div class="four columns alpha teaser">
-               <a href="#" data-text="» Visit Project" class="hovering"><img src="static/images/thumbs/home_teaser1.jpg" alt="" class="scale-with-grid" /></a>
+        <div class="sixteen columns row teasers">
+        {% for item in type_models %}
+            <div class="four columns alpha teaser" style="padding-bottom: 15px; padding-left: 5px">
+               <a href="#" data-text="» Visit Project" class="hovering">
+                <img src="/static/images/apple_its/{{ item.item_pic }}" alt="" class="scale-with-grid" /></a>
                <div class="pluswrap">
                    <a href="#" class="bigplus"></a>
-                   <div class="topline"><a href="#">Desktopography</a></div>
-                   <div class="subline"><a href="#">Web Design</a></div>
+                   <div class="topline"><a href="#">{{item.item_name}}</a></div>
+                   <div class="subline"><a href="#">82 件物品拍賣中</a></div>
                </div>
             </div>
-			<div class="four columns teaser">
-                <a href="#" data-text="» Visit Project" class="hovering"><img src="static/images/thumbs/home_teaser2.jpg" alt="" class="scale-with-grid" /></a>
-                <div class="pluswrap">
-                    <a href="#" class="bigplus"></a>
-                    <div class="topline"><a href="#">Wurzburg</a></div>
-                    <div class="subline">Photoshop</div>
-                </div>
-            </div>
-			<div class="four columns teaser">
-                <a href="#" data-text="» Visit Project" class="hovering"><img src="static/images/thumbs/home_teaser3.jpg" alt="" class="scale-with-grid" /></a>
-                <div class="pluswrap">
-                    <a href="#" class="bigplus"></a>
-                    <div class="topline"><a href="#">Frankfurt</a></div>
-                    <div class="subline">Concepts</div>
-                </div>
-            </div>
-            <div class="four columns omega teaser">
-            	<a href="#" data-text="» Visit Project" class="hovering"><img src="static/images/thumbs/home_teaser4.jpg" alt="" class="scale-with-grid" /></a>
-                <div class="pluswrap">
-                    <a href="#" class="bigplus"></a>
-                    <div class="topline"><a href="#">Amsterdam</a></div>
-                    <div class="subline">Print Design</div>
-                </div>
-            </div>
-		</div>
+        {% endfor %}
+        </div>
         
         <!-- Text Content
-		================================================== -->
+        ================================================== -->
         
         <div class="sixteen columns row divide">
-        	<h3 class="titledivider">The Gist.</h3>
+            <h3 class="titledivider">Macbook 產品歷史介紹</h3>
             <div class="rightlink"><a href="#" class="titlelink">&raquo; Optional Link</a></div>
             <div class="dividerline"></div>
         </div>
 
         <!-- Content Holder -->
-		<div class="eleven columns row left">
+        <div class="sixteen columns row left">
             
                 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
             
-                <ul class="tabs">
+                <!-- <ul class="tabs">
                     <li><a class="active" href="#concept">Concept</a></li>
                     <li><a href="#design">Design</a></li>
                     <li><a href="#support">Support</a></li>
@@ -98,21 +79,21 @@
                             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p> 
                         </div>
                     </li>
-                </ul>
+                </ul> -->
                 
- 				<div class="clear"></div>
+                <div class="clear"></div>
 
         </div>
         
         <!-- Sidebar
         ================================================== -->
 
-        <div class="four columns sidebar offset-by-one">
+        <!-- <div class="four columns sidebar offset-by-one">
         
             <div class="widget">
                 <h5>Fully Responsive</h5>
                 <div>
-                	This template has been designed to display in a readable and usable fashion.<br/>
+                    This template has been designed to display in a readable and usable fashion.<br/>
                     <strong><em>Try resizing your browser window!</em></strong>
                 </div>
             </div>
@@ -130,8 +111,8 @@
             
             <div class="clear"></div>
             
-        </div>
+        </div> -->
             
-	</div><!-- container -->
+    </div><!-- container -->
 
 {% endblock %}

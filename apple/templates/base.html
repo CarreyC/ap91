@@ -23,19 +23,19 @@
 
 	<!-- CSS
   ================================================== -->
-	<link rel="stylesheet" href="static/css/base.css">
-	<link rel="stylesheet" href="static/css/skeleton.css">
-	<link rel="stylesheet" href="static/css/screen.css">
+	<link rel="stylesheet" href="{{url_for('static', filename='css/base.css')}}">
+	<link rel="stylesheet" href="{{url_for('static', filename='css/skeleton.css')}}">
+	<link rel="stylesheet" href="{{url_for('static', filename='css/screen.css')}}">
     <!--[if IE 7]>
         <link rel="stylesheet" href="stylesheets/ie7.css">
     <![endif]-->
 
 	<!-- Favicons
 	================================================== -->
-	<link rel="shortcut icon" href="static/images/favicon.ico">
-	<link rel="apple-touch-icon" href="static/images/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="static/images/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="static/images/apple-touch-icon-114x114.png">
+	<link rel="shortcut icon" href="{{url_for('static', filename='images/favicon.ico')}}">
+	<link rel="apple-touch-icon" href="{{url_for('static', filename='images/apple-touch-icon.png')}}">
+	<link rel="apple-touch-icon" sizes="72x72" href="{{url_for('static', filename='images/apple-touch-icon-72x72.png')}}">
+	<link rel="apple-touch-icon" sizes="114x114" href="{{url_for('static', filename='images/apple-touch-icon-114x114.png')}}">
     
     <!-- Fonts
 	================================================== -->
@@ -52,7 +52,7 @@
 	<div class="poswrapheaderline wide"><div class="headerline full"></div></div>  
     <!-- Remove or uncomment depending on if you want a background image or tile -->
     <!--<div class="tiledbackground"></div>-->
-    <img src="static/images/bg2.jpg" alt="" id="background" />
+    <img src="{{url_for('static', filename='images/bg2.jpg')}}" alt="" id="background" />
     <!-- Change to class="poswrapper wide" and class="whitebackground full" for a full-width site background -->
     <div class="poswrapper wide"><div class="whitebackground full"></div></div>
 
@@ -64,40 +64,43 @@
 		<div class="sixteen columns header">
         
 			<div class="logo"><a href="{{ url_for('trade.start') }}">
-            <img src="static/images/logo.jpg" alt="" /></a>
+            <img src="{{url_for('static', filename='images/logo.jpg')}}" alt="" /></a>
             </div>
-            <div class="logotext"><h3>蘋果咬兩下</h3></div>
+            <div class="logotext"><a href="{{ url_for('trade.start') }}"><h3>蘋果咬兩口</h3></a></div>
             <div class="mainmenu">
                 <div id="mainmenu" class="ddsmoothmenu">
                     <ul>
-                        <li><a href="#">Home</a>
+                        <li><a href="#">註冊</a>
                             <ul>  
-                                <li><a href="{{ url_for('trade.start') }}">Home Layout</a></li>
-                                <li><a href="{{ url_for('trade.alter') }}">Another Layout Example</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">About</a>
+                        <li><a href="#">登入</a>
                             <ul>  
+                            </ul>
+                        </li>
+                        <li><a href="#">個人資訊</a>
+                            <ul>  
+                            </ul>
+                        </li>
+                        <li><a href="#">登錄商品</a>
+                            <ul>  
+                            </ul>
+                        </li>
+                        <li><a href="{{ url_for('trade.contact') }}">模板</a>
+                            <ul>  
+                                <li><a href="{{ url_for('trade.start') }}">Home Layout</a></li>
+                                <li><a href="{{ url_for('trade.cate') }}">Another Layout Example</a></li>
                                 <li><a href="{{ url_for('trade.page_full') }}">Full Page</a></li>
                                 <li><a href="{{ url_for('trade.page_left') }}">Sidebar Left Page</a></li>
                                 <li><a href="{{ url_for('trade.page_right') }}">Sidebar Right Page</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Portfolio</a>
-                            <ul>  
                                 <li><a href="{{ url_for('trade.portfolio_4') }}">Portfolio Four Columns</a></li>
                                 <li><a href="{{ url_for('trade.portfolio_2') }}">Portfolio Two Columns</a></li>
                                 <li><a href="{{ url_for('trade.portfolio_1') }}">Portfolio With Sidebar</a></li>
                                 <li><a href="{{ url_for('trade.portfolio_s') }}">Project Detail Page</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Blog</a>
-                            <ul>  
                                 <li><a href="{{ url_for('trade.blog_overview') }}">Blog Overview</a></li>
                                 <li><a href="{{ url_for('trade.blog_single') }}">Single Blog Post</a></li>
                             </ul>
                         </li>	
-                        <li><a href="{{ url_for('trade.contact') }}">Contact</a></li>	
                     </ul>
                     <br style="clear: left" />
                 </div>
@@ -125,49 +128,80 @@
         	<div class="sixteen columns">
             
                 <div class="four columns widget alpha">
-                    <h5>Latest Projects</h5>
+                    <h5>維修站資訊</h5>
                     <div class="widget_portfolio">
                         <ul>
-                        	<li class="clearfix"><a href="#" class="borderhover"><img src="static/images/thumbs/pop_folio1.jpg" alt="" /></a></li>
-                        	<li class="clearfix"><a href="#" class="borderhover"><img src="static/images/thumbs/pop_folio2.jpg" alt="" /></a></li>
-                            <li class="clearfix"><a href="#" class="borderhover"><img src="static/images/thumbs/pop_folio3.jpg" alt="" /></a></li>
-                            <li class="clearfix"><a href="#" class="borderhover"><img src="static/images/thumbs/pop_folio4.jpg" alt="" /></a></li>
-                            <li class="clearfix"><a href="#" class="borderhover"><img src="static/images/thumbs/pop_folio5.jpg" alt="" /></a></li>
-                            <li class="clearfix"><a href="#" class="borderhover"><img src="static/images/thumbs/pop_folio6.jpg" alt="" /></a></li>
+                        	<li class="clearfix"><a href="#"><img src="{{url_for('static', filename='images/thumbs/pop_folio1.jpg')}}" alt="" /></a></li>
+                        	<li class="clearfix"><a href="#"><img src="{{url_for('static', filename='images/thumbs/pop_folio2.jpg')}}" alt="" /></a></li>
+                            <li class="clearfix"><a href="#"><img src="{{url_for('static', filename='images/thumbs/pop_folio3.jpg')}}" alt="" /></a></li>
+                            <li class="clearfix"><a href="#"><img src="{{url_for('static', filename='images/thumbs/pop_folio4.jpg')}}" alt="" /></a></li>
+                            <li class="clearfix"><a href="#"><img src="{{url_for('static', filename='images/thumbs/pop_folio5.jpg')}}" alt="" /></a></li>
+                            <li class="clearfix"><a href="#"><img src="{{url_for('static', filename='images/thumbs/pop_folio6.jpg')}}" alt="" /></a></li>
                         </ul>
                         <div class="clear"></div>
                     </div>
                 </div>
                 
                 <div class="four columns widget">
-                   <h5>Twitter Feed</h5>
-                   <!-- Twitter Embedded Timeline Markup Replace Here Start -->
-                   With the Twitter API 1.1 you need to go <a href="https://twitter.com/settings/widgets" target="_blank">here</a> to create a twitter widget.<br/>
-				   Paste the generated code here!
-				   <!-- Twitter Embedded Timeline Markup Replace Here End -->
-                </div>
-                
-                <div class="four columns widget">
-                    <h5>Popular Blog Posts</h5>
-                    <div class="widget_blogposts">
+                   <h5>維修項目</h5>
+                   <div class="widget_blogposts">
                         <ul>
-                        	<li class="clearfix">
-                            	<a href="#" class="borderhover"><img src="static/images/thumbs/pop_blog1.jpg" alt="" /></a>
-                                <div class="postlink"><a href="#">Pretty Widgets</a></div>
-                                <div class="subline">January 23, 2012</div>
+                            <li class="clearfix">
+                                <a href="#" class="borderhover">項目一</a>
+                                <div class="postlink"><a href="#">電池更換</a></div>
+                                <div class="subline">手機 & 筆電 老舊電池換新</div>
                             </li>
-                        	<li class="clearfix">
-                            	<a href="#" class="borderhover"><img src="static/images/thumbs/pop_blog2.jpg" alt="" /></a>
+                            <li class="clearfix">
+                                <a href="#" class="borderhover">項目一</a>
                                 <div class="postlink"><a href="#">Convenient Structure</a></div>
                                 <div class="subline">January 21, 2012</div>
                             </li>
                             <li class="clearfix">
-                            	<a href="#" class="borderhover"><img src="static/images/thumbs/pop_blog3.jpg" alt="" /></a>
+                                <a href="#" class="borderhover">項目一</a>
                                 <div class="postlink"><a href="#">Another Blog Post</a></div>
                                 <div class="subline">January 17, 2012</div>
                             </li>
                             <li class="clearfix">
-                            	<a href="#" class="borderhover"><img src="static/images/thumbs/pop_blog4.jpg" alt="" /></a>
+                                <a href="#" class="borderhover">項目一</a>
+                                <div class="postlink"><a href="#">Responsive Layout</a></div>
+                                <div class="subline">January 3, 2012</div>
+                            </li>
+                            <li class="clearfix">
+                                <a href="#" class="borderhover">項目一</a>
+                                <div class="postlink"><a href="#">Responsive Layout</a></div>
+                                <div class="subline">January 3, 2012</div>
+                            </li>
+                            <li class="clearfix">
+                                <a href="#" class="borderhover">項目一</a>
+                                <div class="postlink"><a href="#">Responsive Layout</a></div>
+                                <div class="subline">January 3, 2012</div>
+                            </li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                
+                <div class="four columns widget">
+                    <h5>週邊產品</h5>
+                    <div class="widget_blogposts">
+                        <ul>
+                        	<li class="clearfix">
+                            	<a href="#" class="borderhover"><img src="{{url_for('static', filename='images/thumbs/pop_blog1.jpg')}}" alt="" /></a>
+                                <div class="postlink"><a href="#">手機相關週邊</a></div>
+                                <div class="subline">手機殼、保護貼、吊飾…等</div>
+                            </li>
+                        	<li class="clearfix">
+                            	<a href="#" class="borderhover"><img src="{{url_for('static', filename='images/thumbs/pop_blog2.jpg')}}" alt="" /></a>
+                                <div class="postlink"><a href="#">筆電相關週邊</a></div>
+                                <div class="subline">保護殼、貼紙…等</div>
+                            </li>
+                            <li class="clearfix">
+                            	<a href="#" class="borderhover"><img src="{{url_for('static', filename='images/thumbs/pop_blog3.jpg')}}" alt="" /></a>
+                                <div class="postlink"><a href="#">Another Blog Post</a></div>
+                                <div class="subline">January 17, 2012</div>
+                            </li>
+                            <li class="clearfix">
+                            	<a href="#" class="borderhover"><img src="{{url_for('static', filename='images/thumbs/pop_blog4.jpg')}}" alt="" /></a>
                                 <div class="postlink"><a href="#">Responsive Layout</a></div>
                                 <div class="subline">January 3, 2012</div>
                             </li>
@@ -177,13 +211,13 @@
                 </div>
                 
                 <div class="four columns widget omega">
-                    <h5>Quick Contact</h5>
+                    <h5>與我們聯絡</h5>
                     <div>
                         <form id="quickcontact" method="post" action="#">
-                        <input type="text" name="name" id="quickcontact_name" class="requiredfield" onFocus="if(this.value == 'Name *') { this.value = ''; }" onBlur="if(this.value == '') { this.value = 'Name *'; }" value='Name *'/>
-                        <input type="text" name="email" id="quickcontact_email" class="requiredfield" onFocus="if(this.value == 'Email *') { this.value = ''; }" onBlur="if(this.value == '') { this.value = 'Email *'; }" value='Email *'/>
-                        <textarea name="message" id="quickcontact_message" class="requiredfield" onFocus="if(this.value == 'Message *') { this.value = ''; }" onBlur="if(this.value == '') { this.value = 'Message *'; }">Message *</textarea>
-                        <button type="submit" name="send">Send</button>
+                        <input type="text" name="name" id="quickcontact_name" class="requiredfield" onFocus="if(this.value == 'Name *') { this.value = ''; }" onBlur="if(this.value == '') { this.value = 'Name *'; }" value='怎麼稱呼 *'/>
+                        <input type="text" name="email" id="quickcontact_email" class="requiredfield" onFocus="if(this.value == 'Email *') { this.value = ''; }" onBlur="if(this.value == '') { this.value = 'Email *'; }" value='聯絡信箱 *'/>
+                        <textarea name="message" id="quickcontact_message" class="requiredfield" onFocus="if(this.value == 'Message *') { this.value = ''; }" onBlur="if(this.value == '') { this.value = 'Message *'; }">讓我知道 *</textarea>
+                        <button type="submit" name="send">送出</button>
                         <span class="errormessage">Error! Please correct marked fields.</span>
                         <span class="successmessage">Message send successfully!</span>
                         <span class="sendingmessage">Sending...</span>      
@@ -201,7 +235,7 @@
     <!-- Change to class="container subfooterwrap full" for a full-width subfooter -->
     <div class="container subfooterwrap full">
     	<div class="subfooter">
-        	<div class="eight columns">© 2015 ThemePunch Apex Responsive Portfolio Template.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></div>
+        	<div class="eight columns">© 2019 本網站由逗龍科技 提供 <a href="#" target="_blank" title="逗龍科技">逗龍科技</a></div>
             <div class="eight columns">
             	<ul class="socialicons">
                 	<li><a href="#themepunchofficial" class="social_facebook"></a></li>
@@ -220,20 +254,20 @@
     
 <!-- Scripts
 ================================================== -->
-    <script src="static/js/jquery-1.7.min.js" type="text/javascript"></script>
-    <script src="static/js/jquery.easing.1.3.js" type="text/javascript"></script>
-    <script src="static/js/jquery.animate-colors-min.js" type="text/javascript"></script>
+    <script src="{{url_for('static', filename='js/jquery-1.7.min.js')}}" type="text/javascript"></script>
+    <script src="{{url_for('static', filename='js/jquery.easing.1.3.js')}}" type="text/javascript"></script>
+    <script src="{{url_for('static', filename='js/jquery.animate-colors-min.js')}}" type="text/javascript"></script>
     <!--/***********************************************
     * Smooth Navigational Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
     * This notice MUST stay intact for legal use
     * Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
     ***********************************************/-->
-    <script src="static/js/ddsmoothmenu.js" type="text/javascript"></script>
-    <script src="static/js/jquery.cssAnimate.mini.js" type="text/javascript"></script>
-    <script src="static/js/jquery.fitvids.js" type="text/javascript"></script>
-    <script src="static/js/jquery.flexslider-min.js" type="text/javascript"></script>
-    <script src="static/js/jquery.prettyPhoto.js" type="text/javascript"></script>
-    <script src="static/js/screen.js" type="text/javascript"></script>
+    <script src="{{url_for('static', filename='js/ddsmoothmenu.js')}}" type="text/javascript"></script>
+    <script src="{{url_for('static', filename='js/jquery.cssAnimate.mini.js')}}" type="text/javascript"></script>
+    <script src="{{url_for('static', filename='js/jquery.fitvids.js')}}" type="text/javascript"></script>
+    <script src="{{url_for('static', filename='js/jquery.flexslider-min.js')}}" type="text/javascript"></script>
+    <script src="{{url_for('static', filename='js/jquery.prettyPhoto.js')}}" type="text/javascript"></script>
+    <script src="{{url_for('static', filename='js/screen.js')}}" type="text/javascript"></script>
     
 </body>
 

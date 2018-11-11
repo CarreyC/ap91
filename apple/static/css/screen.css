@@ -36,7 +36,7 @@
 	.dividerlinehalf { position: absolute; z-index: 0; width: 460px; height: 1px; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; margin-top: 23px; }
 	.dividerlinecolumn { position: absolute; z-index: 0; width: 640px; height: 1px; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; margin-top: 23px; }
 	.titledivider { position: absolute; background-color: #f7f7f7; z-index: 1; padding-right: 20px; }
-    .divide h3 { font-size: 25px; }
+    .divide h3 { font-size: 16px; }
 	.bottomadjust { padding-bottom:30px; }
 	.divide .rightlink{  position: relative; float: right; background-color: #f7f7f7; padding-left: 10px; margin-top: 12px; z-index: 1; }
 	
@@ -191,7 +191,7 @@
 	.footer .widget_portfolio img { float: left; border: 5px solid #222; width: 50px; height: 50px; }
 	.sidebar .widget_portfolio img { float: left; border: 5px solid #ddd; width: 50px; height: 50px; }
 	.widget_portfolio ul { float: left; list-style: none; }
-	.widget_portfolio ul li { float: left; padding-bottom: 8px; padding-right: 10px; }
+	.widget_portfolio ul li { float: left; padding-bottom: 8px; padding-right: 6px; }
 	.widget_portfolio ul li.last { padding-right: 0; }
 	.footer .widget_portfolio ul { margin-bottom: -10px; }
     
@@ -199,7 +199,7 @@
 
 /* Mainmenu */	
 	
-	.ddsmoothmenu{ position: relative; float: right; font-family: Arial, Helvetica, sans-serif;  font-size: 12px; line-height: 12px; margin: 0; z-index: 99; }
+	.ddsmoothmenu{ position: relative; float: right; font-family: Arial, Helvetica, sans-serif;  font-size: 14px; line-height: 12px; margin: 0; z-index: 99; }
 	.ddsmoothmenu ul{ z-index: 100; margin: 0; padding: 0; list-style-type: none; }
 	.ddsmoothmenu ul ul{ padding-top: 0px; padding-bottom: 0px; border: 1px solid #ccc; margin-left: 13px; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.10); -moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.10); -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.10); }
 	/*Top level list items*/
