@@ -275,8 +275,10 @@
 
 /* Comments Reply */
 	
-    #respond { float: left; padding-top: 30px; border-top: 1px solid #e5e5e5; }
+    #respond { float: left; padding-top: 30px; }
 	#respond textarea { width: 618px; max-width: 618px; float: left; }	
+	#respond select { float: left; width: 315px; margin-right: 10px; }
+	#respond select.last { margin-right: 0px; width: 315px; }
 	#respond input { float: left; width: 184px; margin-right: 10px; }
 	#respond input.last { margin-right: 0px; width: 186px; }
 	
@@ -342,6 +344,8 @@
 		.slidertext { height: auto; }
 		.ddsmoothmenu ul li a:link, .ddsmoothmenu ul li a:visited{ padding-left: 20px; }
 		.ddsmoothmenu ul ul{ margin-left: -2px; }
+		#respond select { width: 248px; max-width: 248px; }
+		#respond select.last { width: 248px; max-width: 248px; } 
 		#respond input { width: 140px; max-width: 140px; }
 		#respond input.last { width: 142px; max-width: 142px; } 
 		#respond textarea { width: 486px; max-width: 486px; }
@@ -382,6 +386,8 @@
 		.blogdate { display: none; }
 		.dateinfo { display: inline; }
 		.blogpost { padding-bottom: 18px; margin-bottom: 20px; }
+		#respond select { width: 420px; max-width: 420px; margin-right: 0; } 
+		#respond select.last { width: 420px; max-width: 420px; margin-right: 0; } 
 		#respond input { width: 398px; max-width: 398px; margin-right: 0; } 
 		#respond input.last { width: 398px; max-width: 398px; margin-right: 0; } 
 		#respond textarea { width: 398px; max-width: 398px; }
@@ -427,6 +433,8 @@
 		.subfooter .socialtext { width: 320px; text-align: center; margin-right: 0; }
 		.subfooter .socialicons { width: 237px; }
 		#respond textarea { width: 278px; max-width: 278px; }
+		#respond select { width: 300px; max-width: 300px; margin-right: 0; }	
+		#respond select.last { width: 300px; max-width: 300px; margin-right: 0; } 
 		#respond input { width: 278px; max-width: 278px; margin-right: 0; }	
 		#respond input.last { width: 278px; max-width: 278px; margin-right: 0; } 
 		#contactform input { width: 278px; max-width: 278px; margin-right: 0; }	

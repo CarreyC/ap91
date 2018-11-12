@@ -22,7 +22,9 @@ def item_page():
 	return render_template('item_page.html')
 
 
-
+@trade.route('/add_rege')
+def add_rege():
+	return render_template('rege.html')
 
 
 

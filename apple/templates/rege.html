@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% block content %}
+        
+        <!-- Portfolio Teasers
+		================================================== -->
+        
+        <div class="sixteen columns row divide notop">
+        	<h3 class="titledivider" style="font-size: 20px;">登錄商品</h3>
+            <div class="dividerline"></div>
+        </div>
+
+        <!-- Comment Form -->
+        <div class="sixteen columns row teasers">
+            <div class="four columns alpha teaser" style="padding-bottom: 15px; padding-left: 5px">
+               <a href="#" data-text="» Visit Project" class="hovering">
+                <img src="/static/images/apple_its/ipad.jpg" alt="" class="scale-with-grid" /></a>
+               <div class="pluswrap">
+                   <a href="#" class="bigplus"></a>
+                   <div class="topline"><a href="#"></a></div>
+                   <div class="subline"><a href="#">上傳圖片</a></div>
+               </div>
+            </div>
+            <div class="four columns alpha teaser" style="padding-bottom: 15px; padding-left: 5px">
+               <a href="#" data-text="» Visit Project" class="hovering">
+                <img src="/static/images/apple_its/ipad.jpg" alt="" class="scale-with-grid" /></a>
+               <div class="pluswrap">
+                   <a href="#" class="bigplus"></a>
+                   <div class="topline"><a href="#"></a></div>
+                   <div class="subline"><a href="#">上傳圖片</a></div>
+               </div>
+            </div>
+            <div class="four columns alpha teaser" style="padding-bottom: 15px; padding-left: 5px">
+               <a href="#" data-text="» Visit Project" class="hovering">
+                <img src="/static/images/apple_its/ipad.jpg" alt="" class="scale-with-grid" /></a>
+               <div class="pluswrap">
+                   <a href="#" class="bigplus"></a>
+                   <div class="topline"><a href="#"></a></div>
+                   <div class="subline"><a href="#">上傳圖片</a></div>
+               </div>
+            </div>
+            <div class="four columns alpha teaser" style="padding-bottom: 15px; padding-left: 5px">
+               <a href="#" data-text="» Visit Project" class="hovering">
+                <img src="/static/images/apple_its/ipad.jpg" alt="" class="scale-with-grid" /></a>
+               <div class="pluswrap">
+                   <a href="#" class="bigplus"></a>
+                   <div class="topline"><a href="#"></a></div>
+                   <div class="subline"><a href="#">上傳圖片</a></div>
+               </div>
+            </div>
+        </div>
+        
+        <!-- Content Holder -->
+		<div class="eleven columns row content left" style="padding-top: 0px;">
+            <div id="respond" style="padding-top: 0px;">
+                <form method="post" action="#">
+                    <select class="requiredfield" style="height:36px;">
+                      <option value="MacBook">MacBook</option>
+                      <option value="iPhone">iPhone</option>
+                      <option value="iPad">iPad</option>
+                      <option value="iPod">iPod</option>
+                    </select>
+                    <select class="requiredfield last" style="height:36px;">
+                      <option value="volvo">Volvo</option>
+                      <option value="saab">Saab</option>
+                      <option value="opel">Opel</option>
+                      <option value="audi">Audi</option>
+                    </select>
+                    
+                    <input type="text" name="main_cate" class="requiredfield" placeholder="購買年份 (例如：兩年半)*"/>
+                    <input type="text" name="sub_cate" class="requiredfield" placeholder="新舊程度 (例如：九成五新) *"/>
+                    <input type="text" name="sub2_cate" class="requiredfield last" placeholder="保固狀況 (例如：保固中)"/>
+                    <input type="text" name="main_cate" class="requiredfield" placeholder="維修記錄 (例如：兩次，原廠)"/>
+                    <input type="text" name="main_cate" class="requiredfield" placeholder="主分類 *"/>
+                    <input type="text" name="main_cate" class="requiredfield last" placeholder="預計售價 *"/>
+                    <input type="text" name="main_cate" class="requiredfield" placeholder="產品所在地 (例如：台北市) *"/>
+                    <input type="text" name="main_cate" class="requiredfield" placeholder="聯絡電話 *"/>
+                    <input type="text" name="main_cate" class="requiredfield last" placeholder="Email *"/>
+                    <textarea name="message" id="reply_message" class="requiredfield" placeholder="產品項目說明 *"></textarea>
+                    <button type="submit" name="send" style="height:30px; width:100px; float: right;">確認登錄</button>
+                </form>
+            </div>
+ 
+            <div class="clear"></div>
+		</div>
+        
+       <!-- Sidebar
+        ================================================== -->
+
+        <div class="four columns sidebar offset-by-one content" style="padding-top: 0px; padding-left: 30px;">
+            <textarea name="message" id="reply_message" class="requiredfield" style="width:220px; height: 290px;" 
+            placeholder="平台立場&相關寄送提醒\n fkdjsla;fjdas" disabled></textarea>
+            
+            
+            <div class="clear"></div>
+    
+        </div>
+        
+        <!-- Space Adjuster
+        ================================================== -->
+        
+        <div class="sixteen columns bottomadjust"></div>
+   
+	</div><!-- container -->
+
+{% endblock %}
